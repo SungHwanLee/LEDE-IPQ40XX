@@ -69,6 +69,7 @@ define Device/RT-AC58U
 	IMAGES = sysupgrade.tar flash-factory.trx
 	IMAGE/flash-factory.trx := copy-file $(KDIR)/tmp/$$(KERNEL_INITRAMFS_IMAGE) | uImage none
 	IMAGE/sysupgrade.tar := sysupgrade-tar
+	DEVICE_PACKAGES := wifi-board-rt-ac58u
 endef
 
 TARGET_DEVICES += RT-AC58U
