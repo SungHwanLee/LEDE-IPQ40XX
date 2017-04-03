@@ -1,9 +1,13 @@
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/version.mk
 
+PKG_NAME:=wifi-boards
+PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk
+
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
